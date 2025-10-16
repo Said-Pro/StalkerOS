@@ -4,4 +4,4 @@ pour tester
 wget -q "--no-check-certificate" https://raw.githubusercontent.com/Said-Pro/StalkerOS/refs/heads/main/testinstall.sh -O - | /bin/sh
 
 test Said
-wget -q --no-check-certificate -O - "https://raw.githubusercontent.com/Said-Pro/StalkerOS/complete_installer.sh" | sh
+wget -q --no-check-certificate -O - "https://raw.githubusercontent.com/Said-Pro/StalkerOS/refs/heads/main/complete_installer.sh" | sh
