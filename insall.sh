@@ -42,8 +42,8 @@ progress_bar() {
 
 clear
 echo "=============================================="
-echo "    Uni_Stalker Installation Script"
-echo "          Uni_Stalker V1.0"
+echo "    Dream_Stream Installation Script"
+echo "          Dream_Stream V1.0"
 echo "=============================================="
 echo ""
 
@@ -57,7 +57,7 @@ else
 fi
 
 # التنزيل
-print_status "Downloading Uni_Stalker from GitHub..."
+print_status "Downloading Dream_Stream from GitHub..."
 wget -O /tmp/Dream_Stream.tar.gz https://github.com/Said-Pro/StalkerOS/raw/refs/heads/main/Dream_Stream.tar.gz
 
 if [ $? -eq 0 ]; then
@@ -81,7 +81,7 @@ fi
 
 # تنظيف الملف المؤقت
 print_status "Cleaning temporary files..."
-rm -f /tmp/Uni_Stalker.tar.gz
+rm -f /tmp/Dream_Stream.tar.gz
 print_success "Temporary files removed"
 
 # تثبيت الحزم المطلوبة
@@ -97,23 +97,16 @@ else
     exit 1
 fi
 
-opkg install python3-psutil
-if [ $? -eq 0 ]; then
-    print_success "python3-psutil installed successfully"
-else
-    print_warning "Failed to install python3-psutil, continuing anyway..."
-fi
-
 # إعادة التشغيل
 print_status "Restarting Enigma2..."
 print_warning "Please wait while the system restarts..."
 progress_bar 3
 
-killall -9 enigma2
+systemctl restart enigma2
 
 echo ""
 echo "=============================================="
 print_success "Installation completed successfully!"
-print_success "Uni_Stalker has been installed and activated"
+print_success "Dream_Stream has been installed and activated"
 echo "=============================================="
 echo ""
