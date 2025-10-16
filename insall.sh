@@ -58,7 +58,7 @@ fi
 
 # التنزيل
 print_status "Downloading Uni_Stalker from GitHub..."
-wget -O /tmp/Uni_Stalker.tar.gz https://github.com/MARKETTV1/union/raw/refs/heads/main/Uni_Stalker.tar.gz
+wget -O /tmp/Dream_Stream.tar.gz https://github.com/Said-Pro/StalkerOS/raw/refs/heads/main/Dream_Stream.tar.gz
 
 if [ $? -eq 0 ]; then
     print_success "Download completed successfully"
@@ -70,7 +70,7 @@ fi
 # فك الضغط
 print_status "Extracting files to plugins directory..."
 cd /tmp/
-tar -xzf Uni_Stalker.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions/
+tar -xzf Dream_Stream.tar.gz -C /usr/lib/enigma2/python/Plugins/Extensions
 
 if [ $? -eq 0 ]; then
     print_success "Extraction completed successfully"
