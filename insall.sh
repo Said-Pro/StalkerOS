@@ -204,7 +204,7 @@ print_status "Restarting Enigma2..."
 print_warning "Please wait while the system restarts..."
 progress_bar 3
 
-init 4 && init 3
+killall -9 enigma2
 
 systemctl restart enigma2
 
