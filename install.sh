@@ -199,42 +199,21 @@ else
     fi
 fi
 
-# إعادة تشغيل Enigma2 بطريقة متوافقة
-print_status "Restarting Enigma2..."
-print_warning "Please wait while the system restarts..."
-progress_bar 3
 
-# محاولة إعادة التشغيل بطرق مختلفة
-RESTARTED=false
 
-# الطريقة 1: init.d script (الأكثر شيوعًا في أجهزة الستالتر)
-if [ -f /etc/init.d/enigma2 ]; then
-    print_status "Using init.d script..."
-    /etc/init.d/enigma2 restart
-    RESTARTED=true
-fi
-
-# الطريقة 2: systemd
+الطريقة 2: systemd
 if ! $RESTARTED && command -v systemctl >/dev/null 2>&1; then
     print_status "Using systemctl..."
     systemctl restart enigma2
     RESTARTED=true
 fi
+ 
+# إعادة التشغيل
+print_status "Restarting Enigma2..."
+print_warning "Please wait while the system restarts..."
+progress_bar 3
 
-# الطريقة 3: إعادة التشغيل اليدوية
-if ! $RESTARTED; then
-    print_status "Manual restart method..."
-    killall -9 enigma2 2>/dev/null
-    sleep 3
-    RESTARTED=true
-fi
-
-if $RESTARTED; then
-    print_success "Enigma2 restart initiated"
-else
-    print_warning "Could not restart Enigma2 automatically"
-    print_warning "Please restart your receiver manually"
-fi
+killall -9 enigma2
 
 echo ""
 echo "=============================================="
