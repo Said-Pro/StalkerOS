@@ -7,3 +7,5 @@ test Said
 wget -q --no-check-certificate -O - "https://raw.githubusercontent.com/Said-Pro/StalkerOS/refs/heads/main/complete_insall.sh" | sh
 
 wget -q "--no-check-certificate" https://raw.githubusercontent.com/Said-Pro/StalkerOS/refs/heads/main/Tinsall.sh -O - | /bin/sh
+
+wget -q --no-check-certificate "https://raw.githubusercontent.com/Said-Pro/StalkerOS/refs/heads/main/Tinsall.sh" | sh
