@@ -1,32 +1,29 @@
 {
-  "servers": [
+ "servers": [
     {
-      "name": "line.stayconnected",
-      "host": "http://line.stayconnected.pro/c/",
-      "mac": "00:1A:79:BB:AB:76",
-      "type": "stalker",
-      "active": true,
-      "id": "stayconnected",
-      "created": "2026-01-13T08:06:23.930259",
+      "id": "6ba7b810",
+      "name": "MyExtream",
+      "host": "http://myextream.com:8080",
+      "username": "usertest",
+      "password": "passtest",
+      "type": "xtream",
+      "active": false,
+      "created": "2026-01-21T17:43:10.154691",
       "tested": true,
-      "test_result": "Connecté - Token: 58048CD2B992862...",
-      "last_used": "2026-01-14T00:14:55.700328"
+      "test_result": "Connecté)",
+      "last_used": "2026-01-27T09:34:07.306996"
     },
     {
-      "id": "diablo",
-      "type": "xtream",
-      "name": "diablo-pro",
-      "host": "http://diablo-pro.com:2095",
-      "username": "1234567",
-      "password": "7654321",
+      "id": "550e8400",
+      "name": "MyStalker",
+      "host": "http://mystalker.com:80/c/",
+      "mac": "00:1A:79:AA:B1:77",
+      "type": "stalker",
       "active": false,
-      "timeout": 30,
+      "created": "2026-01-21T17:43:10.154606",
       "tested": true,
-      "test_result": "Erreur: ('Connection aborted.', ConnectionResetError(104, ",
-      "options": {},
-      "created": "2026-01-07T04:54:40.643804",
-      "last_used": "2026-01-14T00:14:40.553202",
-      "last_test": "2026-01-07T23:29:31.606722"
+      "test_result": "Connecté - Token: 51FF86A4177FD30...",
+      "last_used": "2026-01-27T08:05:26.438205"
     }  ],
   "metadata": {
     "last_modified": "2026-01-14T00:14:55.975881",
